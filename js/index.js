@@ -4,8 +4,7 @@ const output = document.getElementById("output");
 
 
 function addToOutput(s) {
-  // output.value += ">>>" + code.value + "\n" + s + "\n";
-  output.value += "\n" + s;
+  output.value = s;
 }
 
 let outputBuffer = [];
@@ -24,6 +23,7 @@ async function main() {
 
   run.addEventListener("click", () => {
     const code = repl.value;
+    outputBuffer = [];
     pyodide.runPython(code);
     addToOutput(outputBuffer.join("\n"));
   });
