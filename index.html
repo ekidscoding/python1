@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Підключення Pyodide -->
     <script src="https://cdn.jsdelivr.net/pyodide/v0.28.0/full/pyodide.js"></script>
+
+    <!-- Підключення Monaco Editor -->
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/loader.js"></script> <!-- Додано -->
+
     <title>Pyodide PoC</title>
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
@@ -11,16 +17,26 @@
 
   <body>
     <p>
-      Ви можете виконати Пайтон код натиснувши кнопку внизу
+      Ви можете виконати <mark>Пайтон</mark> код натиснувши кнопку <kbd>▶️</kbd> внизу
     </p>
-    <textarea rows="15" cols="50" id="repl"></textarea>
-    <br>
-    <button id="run">Кнопка</button>
+
+    <!-- Старий textarea для редактора (замінили на div) -->
+    <!-- <textarea rows="15" cols="50" id="repl"></textarea> -->
+
+    <!-- Контейнер для Monaco Editor -->
+    <div id="repl" style="width: 100%; border: 1px solid #ccc;"></div> <!-- Додано -->
+
+    <!-- <br> -->
+    <button id="run">▶️</button>
+
     <div>
-      <span>Вивід:</span>
+      <p>
+        Вивід:
+      </p>
       <textarea id="output" style="width: 100%;" rows="30" disabled></textarea>
     </div>
-    <script src="js/index.js">
-    </script>
+
+    <!-- Основний JS -->
+    <script src="js/index.js"></script>
   </body>
 </html>
