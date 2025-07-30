@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.28.0/full/pyodide.js"></script>
+    <title>Pyodide PoC</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <p>
+      Ви можете виконати Пайтон код натиснувши кнопку внизу
+    </p>
+    <textarea rows="15" cols="50" id="repl"></textarea>
+    <br>
+    <button id="run">Кнопка</button>
+    <div>
+      <span>Вивід:</span>
+      <textarea id="output" style="width: 100%;" rows="6" disabled></textarea>
+    </div>
+    <script src="js/index.js">
+    </script>
+  </body>
+</html>
